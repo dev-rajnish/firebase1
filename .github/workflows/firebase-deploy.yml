@@ -2,9 +2,9 @@ name: Deploy to Firebase Hosting
 
 on:
   push:
-    branches: [ main ]  # Trigger on pushes to the main branch
+    branches: [ master ]  # Trigger on pushes to the main branch
   pull_request:  # Optionally trigger on pull requests
-    branches: [ main ]
+    branches: [ master ]
     paths:
       - 'public/**'  # Only trigger on changes in the public directory (adjust as needed)
 
