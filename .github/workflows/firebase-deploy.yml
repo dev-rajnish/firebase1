@@ -2,10 +2,10 @@ name: Deploy to Firebase Hosting
 
 on:
   push:
-    branches: [ master ]  # Trigger on pushes to the main branch
+    branches:
+      - master  # Trigger on pushes to the master branch
     paths:
       - 'public/**'  # Only trigger on changes in the public directory (adjust as needed)
-
 
 jobs:
   deploy:
@@ -13,11 +13,12 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-       - name: Deploy to Firebase Hosting
+
+      - name: Deploy to Firebase Hosting
         uses: FirebaseExtended/action-hosting-deploy@v1
         with:
           repo: 'dev-rajnish/firebase1'
           token: '${{ secrets.FIREBASE_SERVICE_ACCOUNT }}'
           site: 'rkjshello'  # Optional, if you have multiple sites
           prerelease: 'false'  # Set to 'true' for staging or preview deployments
-          distribute: 'false' 
+          distribute: 'false'
