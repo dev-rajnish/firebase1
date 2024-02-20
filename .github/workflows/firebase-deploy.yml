@@ -17,7 +17,11 @@ jobs:
       - name: Install Firebase CLI
         run: |
           npm install -g firebase-tools
-
-      - name: Deploy to Firebase Hosting
-        run: |
-          firebase deploy --only hosting --project "${{ secrets.FIREBASE_PROJECT_ID }}" --token "${{ secrets.FIREBASE_TOKEN }}"
+- name: Deploy to Firebase Hosting
+        uses: FirebaseExtended/action-hosting-deploy@v1
+        with:
+          repo: 'dev-rajnish/firebase1'
+          token: '${{ secrets.FIREBASE_SERVICE_ACCOUNT }}'
+          site: 'rkjshello'  # Optional, if you have multiple sites
+          prerelease: 'false'  # Set to 'true' for staging or preview deployments
+          distribute: 'false' 
