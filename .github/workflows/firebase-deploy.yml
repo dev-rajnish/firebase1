@@ -13,8 +13,7 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-
-- name: Deploy to Firebase Hosting
+       - name: Deploy to Firebase Hosting
         uses: FirebaseExtended/action-hosting-deploy@v1
         with:
           repo: 'dev-rajnish/firebase1'
