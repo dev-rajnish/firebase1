@@ -1,5 +1,6 @@
 {
   "projects": {
+    "site" : "rkjshello",
     "default": "js101-fa07c"
   }
 }

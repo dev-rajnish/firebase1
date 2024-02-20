@@ -1,6 +1,5 @@
 {
   "hosting": {
-    "site" :"rkjshello",
     "public": "public",
     "ignore": [
       "firebase.json",
